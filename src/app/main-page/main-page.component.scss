@@ -1,0 +1,31 @@
+.card {
+  width: 550px;
+  padding-top: 10%;
+  background: rgb(150 150 150 / 30%);
+  padding: 50px;
+  padding-top: 20px;
+  border: dark solid 2px;
+
+  #session {
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 100px;
+    border-radius: 25%;
+  }
+  .timer {
+    display: flex;
+    margin: auto;
+  }
+  .controls {
+    margin-top: 15px;
+  }
+  .sec {
+    font-weight: bold;
+    font-size: 20px;
+    p {
+      margin: 0px;
+    }
+  }
+  .t-align {
+    align-items: center;
+  }
+}

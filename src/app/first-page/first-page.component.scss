@@ -1,0 +1,14 @@
+.front-body {
+  background: url("/assets/bg-front.jpeg") no-repeat;
+  background-size: cover;
+  height: 100%;
+  min-height: 1000px;
+  .middle {
+    display: flex;
+    padding-top: 30%;
+    .start {
+      border: none;
+      padding: 20px;
+    }
+  }
+}

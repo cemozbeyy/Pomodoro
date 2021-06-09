@@ -1,0 +1,39 @@
+<div class="container card">
+  <div class="row">
+    <div class="col-sm-12"><h1 class="text-center">Pomodoro Sayacı</h1></div>
+  </div>
+  <div class="row t-align col-sm-12">
+    <div class="col-sm-6">
+      <input type="number" [(ngModel)]="restTime" (ngModelChange)="reset()" />
+    </div>
+    <div class="col-sm-6">
+      <input type="number" [(ngModel)]="workTime" (ngModelChange)="reset()" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-5 text-center sec">Rest Time</div>
+    <div class="col-sm-4 offset-sm-3 text-center sec m-auto">Pomodoro Time</div>
+  </div>
+  <div class="row timer">
+    <span
+      [ngStyle]="{color:whatIDo == 'work' ? 'blue' : whatIDo == 'rest' ? 'green' : 'black'}" style="font-size: 40px">
+      {{ getDurationToMinute(duration) }}
+    </span>
+  </div>
+  <div class="row">
+    <div class="col-3 text-center controls">
+      <button class="btn btn-success" (click)="startWorkTime()">Başlat</button>
+    </div>
+    <div class="col-3 text-center controls">
+      <button class="btn btn-danger"  (click)="pauseWork()">Durdur</button>
+    </div>
+    <div class="col-3 text-center controls">
+      <button class="btn btn-warning" [disabled]="whatIDo != 'paused'" (click)="showResult()">
+        Oturumu Bitir
+      </button>
+    </div>
+    <div class="col-3 text-center controls">
+      <button class="btn btn-danger" [disabled]="whatIDo != 'paused'" (click)="reset()">Reset</button>
+    </div>
+  </div>
+</div>
